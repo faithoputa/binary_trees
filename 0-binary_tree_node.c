@@ -17,13 +17,15 @@ if (node == NULL)
 return (NULL);
 
 /* Assign the value and the parent pointer to the new node */
+if (value)
+{
 node->n = value;
 node->parent = parent;
-
 /* Set the left and right child pointers to NULL */
 node->left = NULL;
 node->right = NULL;
-
+return (node);
+}
 /* Return the pointer to the new node */
 return (node);
 }
